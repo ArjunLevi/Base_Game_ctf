@@ -11,20 +11,20 @@ const deployChallengeSolution: DeployFunction = async function (hre: HardhatRunt
   // - localhost: hardhat account 0
   // - live network: encrypted PK in .env file (use `yarn generate` to generate one or `yarn account:import` to import your own PK)
   //
-  //   const { deployer } = await hre.getNamedAccounts();
-  //   const { deploy } = hre.deployments;
-  //
-  //   await deploy("Challenge2Solution", {
-  //     from: deployer,
-  //     log: true,
-  //     autoMine: true,
-  //   });
-  //
-  //   console.log("🚩 Challenge Solution contract deployed");
+  const { deployer } = await hre.getNamedAccounts();
+  const { deploy } = hre.deployments;
+
+  await deploy("Challenge2Solution", {
+    from: deployer,
+    log: true,
+    autoMine: true,
+  });
+
+  console.log("🚩 Challenge Solution contract deployed");
 };
 
 export default deployChallengeSolution;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags solution2
-deployChallengeSolution.tags = ["solution2"];
+deployChallengeSolution.tags = ["Challenge2Solution"];
