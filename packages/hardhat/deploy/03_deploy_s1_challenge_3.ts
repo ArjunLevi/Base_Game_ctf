@@ -20,4 +20,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 export default func;
 func.tags = ["CtfChallenge3"];
 
-// yarn deploy --tags S1Challenge3 --network optimism --reset
+// yarn deploy --tags CtfChallenge3 --network optimism --reset
