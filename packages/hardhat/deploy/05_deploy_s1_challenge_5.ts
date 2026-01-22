@@ -18,7 +18,7 @@ const deployS2Challenge5: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
-  const solver = await ethers.getContractAt("S2Challenge5Solver", deployment.address);
+  const solver = await ethers.getContractAt("S1Challenge5Solver", deployment.address);
 
   console.log("🛰  Executing reentrancy attack...");
 
