@@ -6,7 +6,7 @@ interface ITarget {
 }
 
 // THIS NAME MUST MATCH THE DEPLOY SCRIPT EXACTLY
-contract CtfChallenge3 { 
+contract CtfChallenge3 {
     constructor(address target) {
         ITarget(target).mintFlag();
     }
