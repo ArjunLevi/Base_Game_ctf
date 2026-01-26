@@ -1,12 +1,13 @@
-//SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 interface IChallenge2 {
-    function justCallMe() external;
+    // The specific function name for Challenge 2 (S1)
+    function justCallMe() external; 
 }
-
-contract Challenge2Solution {
-    function justCallMe(address _challenge2) public {
-        IChallenge2(_challenge2).justCallMe();
+contract S1Challenge2Solution {
+    constructor(address _target) {
+        // Call the correct function name
+        IChallenge2(_target).justCallMe();
     }
 }
